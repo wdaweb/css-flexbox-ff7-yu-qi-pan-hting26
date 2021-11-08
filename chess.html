@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,
+    body {
+      font-family: '標楷體';
+      box-sizing: border-box;
+      margin: 0;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .plate {
+      position: relative;
+      display: flex;
+      width: 700px;
+      height: 750px;
+      border: 1px solid #000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .plate2 {
+      width: 560px;
+      height: 630px;
+      border: 1px solid #000;
+    }
+
+    .blackarea {
+      display: flex;
+      width: 560px;
+      height: 280px;
+      flex-flow: row wrap;
+    }
+
+    .box {
+      width: 70px;
+      height: 70px;
+      border: 1px solid #000;
+    }
+
+    .box1 {
+      width: 70px;
+      height: 70px;
+      border: 1px solid #000;
+      background: linear-gradient(45deg, transparent 49%, #000 49%, transparent 51%);
+    }
+
+    .box2 {
+      width: 70px;
+      height: 70px;
+      border: 1px solid #000;
+      background: linear-gradient(135deg, transparent 49%, #000 49%, transparent 51%);
+    }
+
+    .redarea {
+      display: flex;
+      width: 560px;
+      height: 280px;
+      flex-flow: row wrap;
+    }
+
+    .river {
+      width: 560px;
+      height: 70px;
+      border: 1px solid #000;
+      /* text-align: center; */
+      line-height: 70px;
+      font-size: 40px;
+      display: flex;
+      flex-wrap: nowrap;
+
+    }
+
+    .left {
+      width: 280px;
+      text-align: center;
+    }
+
+    .right {
+      width: 280px;
+      text-align: center;
+    }
+
+    .piece {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background: white;
+      font-size: 35px;
+      text-align: center;
+      line-height: 50px;
+      margin-right: 10px;
+      margin-left: 10px;
+      /* background: linear-gradient(#000 50%, rgb(221, 164, 164) 50%); */
+
+    }
+
+    .blank {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      margin-left: 10px;
+      /* border: 1px solid aqua; */
+      /* background: linear-gradient(to right, #000 50%, rgb(221, 164, 164) 50%); */
+    }
+
+    .black {
+      width: 700px;
+      height: 330px;
+      /* background-color: antiquewhite; */
+      position: absolute;
+      top: 0;
+      display: flex;
+      /* justify-content: center; */
+      flex-flow: row wrap;
+      padding: 25px 20px;
+    }
+
+    .red {
+      width: 700px;
+      height: 330px;
+      /* background-color: antiquewhite; */
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      padding: 25px 20px;
+      color: red;
+    }
+
+    .text {
+      writing-mode: vertical-lr;
+      font-size: 35px;
+      height: 750px;
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    .text2 {
+      writing-mode: vertical-lr;
+      font-size: 35px;
+      height: 750px;
+      margin-left: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="text">棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</div>
+    <div class="plate">
+      <div class="black">
+        <div class="piece">車</div>
+        <div class="piece">馬</div>
+        <div class="piece">象</div>
+        <div class="piece">士</div>
+        <div class="piece">將</div>
+        <div class="piece">士</div>
+        <div class="piece">象</div>
+        <div class="piece">馬</div>
+        <div class="piece">車</div>
+
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+
+        <div class="blank"></div>
+        <div class="piece">包</div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="piece">包</div>
+        <div class="blank"></div>
+
+        <div class="piece">卒</div>
+        <div class="blank"></div>
+        <div class="piece">卒</div>
+        <div class="blank"></div>
+        <div class="piece">卒</div>
+        <div class="blank"></div>
+        <div class="piece">卒</div>
+        <div class="blank"></div>
+        <div class="piece">卒</div>
+      </div>
+
+      <div class="red">
+        <div class="piece">兵</div>
+        <div class="blank"></div>
+        <div class="piece">兵</div>
+        <div class="blank"></div>
+        <div class="piece">兵</div>
+        <div class="blank"></div>
+        <div class="piece">兵</div>
+        <div class="blank"></div>
+        <div class="piece">兵</div>
+
+        <div class="blank"></div>
+        <div class="piece">炮</div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="piece">炮</div>
+        <div class="blank"></div>
+
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+
+        <div class="piece">俥</div>
+        <div class="piece">傌</div>
+        <div class="piece">相</div>
+        <div class="piece">仕</div>
+        <div class="piece">帥</div>
+        <div class="piece">仕</div>
+        <div class="piece">相</div>
+        <div class="piece">傌</div>
+        <div class="piece">俥</div>
+      </div>
+      <div class="plate2">
+        <div class="blackarea">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box2"></div>
+          <div class="box1"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="river">
+          <div class="left">楚河</div>
+          <div class="right">漢界</div>
+        </div>
+        <div class="redarea">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box2"></div>
+          <div class="box1"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text2">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</div>
+  </div>
+</body>
+
+</html>
